@@ -32,6 +32,7 @@ class FilmViewSet(viewsets.ModelViewSet):
 
     @action(detail=True, methods=['POST'])
     def rate_film(self, request, pk=None):
+        print (request.user)
         resonse = {"message": 'Dostępny'}
         return Response (resonse, status=status.HTTP_200_OK)
 
